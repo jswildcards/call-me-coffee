@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Call Me Coffee</title>
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/music.css">
+  <script src="js/behaviour.js"></script>
+</head>
+<body onload="checkUser(); hideBar();">
+  <div id="navtop">
+    <div class="nav">
+      <a id="shop_name" href="index.html">Call Me Coffee</a>
+      <a href="menu.html">Menu</a>
+      <a href="product.html">Product</a>
+      <a href="order.html">Order</a>
+      <a href="music.html">Music</a>
+      <a id="login" class="login" href="login.html">Log In</a>
+    </div>
+    
+    <div id="nav_icon">
+      <span onclick="showMenu();"><img src="img/icon/menu.png" alt=""></span>
+      <a id="shop_icon" href="index.html"><img src="img/icon/shopicon.png" alt=""></a>
+      <a id="login_icon" class="login" href="login.html"><img src="img/icon/login.png" alt=""></a>
+    </div>
+  </div>
+  
+  <div id="navMenu" onclick="hideMenu()">
+    <a id="shop_name" href="index.html">Call Me Coffee</a>
+    <a href="menu.html">Menu</a>
+    <a href="product.html">Product</a>
+    <a href="order.html">Order</a>
+    <a href="music.html">Music</a>
+    <a id="login_menu" class="login" href="login.html">Log In</a>
+  </div>
+  
+  <div id="content" onclick="showBar()">
+    <div id="header"></div>
+    <iframe src="https://www.youtube.com/embed/playlist?list=PLitYMcYHOMQ0SuGhVhz1Uq5Pok6Jrx1xh&controls=0&showinfo=0&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>
+  </div>
+  
+  <div id="footer">
+    <div class="nav">
+      <a href="https://www.facebook.com/mecoffee.call.7"><img src="img/icon/facebook.png" alt=""></a>
+      <a href="https://www.instagram.com/call_mecoffee/"><img src="img/icon/instagram.png" alt=""></a>
+      <a href="https://twitter.com/Call_MeCoffee"><img src="img/icon/twitter.png" alt=""></a>
+    </div>
+  </div>
+</body>
+</html>

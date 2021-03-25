@@ -1,0 +1,29 @@
+body {
+  background: url(../img/login.jpeg) center;
+  background-size: cover;
+}
+
+::placeholder {
+  color: #333;
+}
+
+#content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#login_form {
+  display: flex;
+  flex-direction: column;
+  padding: 60px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+}
+
+#slogon {
+  color: #69c;
+  text-shadow: 0 0 10px #fff;
+  font-size: 36px;
+  margin-bottom: 36px;
+}

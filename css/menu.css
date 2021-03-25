@@ -1,0 +1,18 @@
+.highlight {
+  color: #9cf;
+}
+
+#header {
+  background: url('../img/menu.jpg') center;
+  background-size: cover;
+}
+
+#coffee {
+  background: url(../img/coffee.jpg) center fixed;
+  background-size: cover;
+}
+
+#dessert {
+  background: url(../img/dessert.jpg) center fixed;
+  background-size: cover;
+}

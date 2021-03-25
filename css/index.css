@@ -1,0 +1,102 @@
+/* set the background */
+body {
+  background: url("../img/index.jpeg") center fixed;
+  background-size: cover;
+}
+
+/* make te content to center */
+#content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* format the slogon "Styling Your Life." */
+#bgword {
+  max-width: 1000px;
+  margin-bottom: 40px;
+  font-size: 120px;
+  color: #fff;
+  text-shadow: 0 0 20px #444;
+}
+
+/* #intro: format the selection of pages */
+#intro {
+  display: flex;
+  flex-direction: column;
+}
+
+#intro>* {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  transition: .5s;
+}
+
+#intro>*:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#intro>*>* {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+#intro .explain {
+  text-align: left;
+}
+
+#intro img {
+  display: block;
+  width: 64px;
+  transition: .5s;
+}
+
+#intro>*:hover img {
+  transform: rotate(370deg);
+}
+
+/* decrease font size when screen width decresed */
+@media only screen and (max-width: 1000px) {
+  #bgword {
+    font-size: 72px;
+  }
+}
+
+/* some secondary information can be omitted */
+@media only screen and (max-width: 700px) {
+  #bgword {
+    font-size: 40px;
+  }
+  #intro .name {
+    display: none;
+  }
+  #intro img {
+    width: 32px;
+  }
+}
+
+/* animation field: control flow of animation */
+#intro {
+  opacity: 0;
+  animation: fadeIn 1s 2.5s, fadeIn_after 1s 3.5s infinite;
+}
+
+#bgword #cursor {
+  animation: cursor 1s infinite;
+}
+
+@keyframes fadeIn {
+  100% { opacity: 1; }
+}
+
+@keyframes fadeIn_after {
+  from, to { opacity: 1; }
+}
+
+@keyframes cursor {
+  50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}

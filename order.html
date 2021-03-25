@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Call Me Coffee</title>
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/order.css">
+  <script src="js/behaviour.js"></script>
+</head>
+<body onload="checkUser(); forcedLogin();">
+  <div id="navtop">
+    <div class="nav">
+      <a id="shop_name" href="index.html">Call Me Coffee</a>
+      <a href="menu.html">Menu</a>
+      <a href="product.html">Product</a>
+      <a href="order.html">Order</a>
+      <a href="music.html">Music</a>
+      <a id="login" class="login" href="login.html">Log In</a>
+    </div>
+    
+    <div id="nav_icon">
+      <span onclick="showMenu();"><img src="img/icon/menu.png" alt=""></span>
+      <a id="shop_icon" href="index.html"><img src="img/icon/shopicon.png" alt=""></a>
+      <a id="login_icon" class="login" href="login.html"><img src="img/icon/login.png" alt=""></a>
+    </div>
+  </div>
+  
+  <div id="navMenu" onclick="hideMenu()">
+    <a id="shop_name" href="index.html">Call Me Coffee</a>
+    <a href="menu.html">Menu</a>
+    <a href="product.html">Product</a>
+    <a href="order.html">Order</a>
+    <a href="music.html">Music</a>
+    <a id="login_menu" class="login" href="login.html">Log In</a>
+  </div>
+  
+  <div id="sample_add">
+    <span class="itemName">Sample</span>
+    <input type="number" placeholder="quantity" value="1" id="sample_qty" class="qty" min="1" max="20" onchange="calSubtotal(id); enableOption(id); calTotal()" />
+    <input type="radio" name="sample_option" value="sample_hot" id="sample_hot" class="sample_option" onclick="calSubtotal(id); calTotal()" disabled="true" checked="true" />
+    <label for="sample_hot" class="optionName">hot</label>
+    <input type="radio" name="sample_option" value="sample_cold" id="sample_cold" class="sample_option" onclick="calSubtotal(id); calTotal()" disabled="true" />
+    <label for="sample_cold" class="optionName">cold</label>
+    Retail Price: 
+    <input class="retailPrice" disabled="true" size="2" id="sample_retailPrice" value=0 />
+    <input disabled="true" id="sample_subtotal" class="subtotal" size="3" value=0 />
+  </div>
+  
+  <div id="content">
+    <form id="order_form" onsubmit="showForm();">
+      <div id="title">Order</div>
+      
+      <div id="list">
+        <div id="drink_list" class="menu_list">
+          <h2>Coffee</h2>
+          <div>
+            latte
+            <button id="latte" onmouseover="addOrder(id)">+</button>
+          </div>
+          <div>
+            black
+            <button id="black" onmouseover="addOrder(id)">+</button>
+          </div>
+          <div>
+            cappuccino
+            <button id="cappuccino" onmouseover="addOrder(id)">+</button>
+          </div>
+          <div>
+            macchiato
+            <button id="macchiato" onmouseover="addOrder(id)">+</button>
+          </div>
+        </div>
+        
+        <div id="food_list" class="menu_list">
+          <h2>Dessert</h2>
+          <div>
+            pancake
+            <button id="pancake" onmouseover="addOrder(id)">+</button>
+          </div>
+          <div>
+            cookie
+            <button id="cookie" onmouseover="addOrder(id)">+</button>
+          </div>
+          <div>
+            pudding
+            <button id="pudding" onmouseover="addOrder(id)">+</button>
+          </div>
+          <div>
+            ice cream
+            <button id="iceCream" onmouseover="addOrder(id)">+</button>
+          </div>
+        </div>
+      </div>
+      
+      <div id="order_list">
+        <h2>Would You Like Some...?</h2>
+      </div>
+     <div>
+         Total:
+        <input type="number" name="total" id="total" size='4' disabled />
+      </div>
+      <div>
+        <input type="radio" name="location" value="dine_in" id="dine_in" checked /><label for="dine_in">Dine In</label>
+      </div>
+      <div>
+        <input type="radio" name="location" id="take_away" value="take_away" /><label for="take_away">Take Away</label>
+      </div>
+      <input type="submit" id="submit" value="Submit" />
+      <button id="reset" onclick="location.reload();">Reset</button>
+    </form>
+  </div>
+  
+  <div id="footer">
+    <div class="nav">
+      <a href="https://www.facebook.com/mecoffee.call.7"><img src="img/icon/facebook.png" alt=""></a>
+      <a href="https://www.instagram.com/call_mecoffee/"><img src="img/icon/instagram.png" alt=""></a>
+      <a href="https://twitter.com/Call_MeCoffee"><img src="img/icon/twitter.png" alt=""></a>
+    </div>
+  </div>
+</body>
+</html>

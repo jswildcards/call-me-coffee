@@ -1,0 +1,46 @@
+body {
+  background: #000;
+}
+
+#header {
+  background: url(../img/music.jpg) center;
+  background-size: cover;
+}
+
+iframe {
+  width: 100%;
+  height: 99%;
+  pointer-events: none;
+}
+
+.navtop_hide {
+  animation: hideNav 1s 2s, hideNav_after 1s 3s infinite;
+}
+
+.footer_hide {
+  animation: hideFooter 1s 2s, hideFooter_after 1s 3s infinite;
+}
+
+@keyframes hideNav {
+  100% { top: -60px; }
+}
+
+@keyframes hideNav_after {
+  0%, 100% { top: -60px; }
+}
+
+@keyframes hideFooter {
+  100% { bottom: -60px; }
+}
+
+@keyframes hideFooter_after {
+  0%, 100% { bottom: -60px; }
+}
+
+@keyframes fadeOut {
+  100% { height: 0px; max-width: 1000px; }
+}
+
+@keyframes fadeOut_after {
+  from, to { height: 0px; }
+}

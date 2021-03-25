@@ -1,0 +1,14 @@
+#header {
+  background: url(../img/product.jpg) center;
+  background-size: cover;
+}
+
+#coffee_powder {
+  background: url(../img/coffee_powder.jpg) center;
+  background-size: cover;
+}
+
+#peripheral {
+  background: url(../img/other.jpg) center;
+  background-size: cover;
+}

@@ -1,0 +1,240 @@
+html, body {
+  background: #fff;
+  margin: 0;
+  height: 100%;
+  font-family: sans-serif;
+  background: #444;
+}
+
+/* no effects would be used for hyper link */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* the width should be 20% for the title of menu of products of pages "menu.html" and "product.html" */
+.title {
+  min-width: 20%;
+  max-width: 20%;
+}
+
+/* set shop name */
+#shop_name {
+  font-family: serif;
+  font-style: italic;
+}
+
+/* menu of faded-out menu(when width is decreased to 700px)  */
+#navMenu {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+#navMenu>* {
+  padding: 20px;
+}
+
+/* fixed position and set to top of pages(using z-index) */
+#navtop, #footer {
+  z-index: 999;
+  background: #eee;
+  position: fixed;
+  width: 100%;
+}
+
+#navtop {
+  top: 0;
+}
+
+/* navigation content of navigation bar */
+.nav {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.nav>* {
+  display: inline-block;
+  padding: 16px;
+  transition: .2s;
+}
+
+.nav>*:hover {
+  background: #ddd;
+}
+
+.nav #shop_name {
+  border-right: 1px solid black;
+}
+
+#navtop img {
+  padding: 4px;
+  width: 40px;
+}
+
+#navtop #nav_icon {
+  display: none;
+}
+
+#navtop #login {
+  float: right;
+}
+
+/* style of footer(fixed it to bottom) */
+#footer {
+  bottom: 0;
+}
+
+#footer img {
+  width: 22px;
+  opacity: .5;
+  transition: .2s;
+}
+
+#footer>*>*:hover>img {
+  opacity: 1;
+}
+
+/* content of each page */
+#content {
+  height: 100%;
+}
+
+/* set header of each page */
+#header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-shadow: 0 0 20px #000;
+  font-size: 48px;
+}
+
+/* set line(menu) */
+#line {
+  height: 800px;
+  max-width: 900px;
+  margin: 60px auto;
+}
+
+#line>* {
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 0 10px;
+}
+
+#line>*>* {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+#line .title {
+  font-size: 28px;
+}
+
+#line .title, #line>*>:hover {
+  transition: .5s;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+#line>*>*>.desc {
+  display: none;
+}
+
+#line>*>*:hover>.desc {
+  display: inline-block;
+}
+
+#line>:last-child {
+  flex-direction: row-reverse;
+}
+
+/* set style of input */
+input {
+  border: 0;
+  outline: none;
+}
+
+input:not([type="submit"]):not([type="reset"]) {
+  background: transparent;
+  border-bottom: 1px solid #000;
+  padding-top: 16px;
+}
+
+/* submit button of login page and order page */
+#submit {
+  margin-top: 32px;
+  padding: 32px;
+  background: #0c0;
+  color: #fff;
+}
+
+#submit:hover {
+  background: #090;
+}
+
+#submit:active {
+  background: #060;
+}
+
+/* set content when width changed */
+@media only screen and (max-width: 1000px) {
+  #line {
+    margin: 0 auto 60px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .nav {
+    display: none;
+  }
+  
+  #navtop #nav_icon {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #header {
+    font-size: 28px;
+  }
+  
+  #line>* {
+    display: block;
+    height: auto;
+    margin: 60px;
+  }
+  
+  #line>*>*>.desc {
+    display: block;
+  }
+
+  .title {
+    max-width: 100%;
+  }
+}
+
+/* aniamtion field */
+#header {
+  margin: auto;
+  height: 100%;
+  max-width: 100%;
+  animation: fadeOut 1s 2s, fadeOut_after 1s 3s infinite;
+}
+
+@keyframes fadeOut {
+  100% { height: 300px; max-width: 1000px; padding-top: 60px; }
+}
+
+@keyframes fadeOut_after {
+  from, to { height: 300px; max-width: 1000px; padding-top: 60px; }
+}
